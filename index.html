@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mon Site «Anaclet Bakajika»</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ================= Splash screen logo ================= -->
+<div id="splash">
+    <img src="images/logo.png" alt="Mon logo" id="logo">
+</div>
+
+<!-- ================= Message de bienvenue ================= -->
+<div id="welcome" style="display:none;">
+    <h1>Bienvenue sur mon site !</h1>
+    <p>Ce site a été créé par <strong>Anaclet Bakajika</strong>.</p>
+    <button id="startBtn">Cliquez ici pour commencer</button>
+</div>
+<!-- ================= Section Biographie + Remerciements ================= -->
+<section id="biographie" style="display:none;">
+    <h2 class="section-title">📝 Ma biographie</h2>
+    <p>
+        Bonjour ! Je suis Anaclet Bakajika. Depuis mon enfance, j’ai appris à apprécier chaque moment, à respecter mes parents, à croire en moi et à persévérer malgré les difficultés. Chaque expérience m’a façonné et m’a appris à devenir la personne que je suis aujourd’hui.
+    </p>
+    <hr> <!-- séparation visuelle -->
+    <h3 class="section-title">💖 Mes remerciements</h3>
+    <p class="merci-text">
+        Je remercie d’abord <strong>le bon Dieu</strong> pour sa guidance et sa protection.<br>
+        Je remercie mes <strong>parents</strong> pour leur amour et leurs sacrifices.<br>
+        Je remercie <strong>une personne importante </strong> pour moi,  Urielle Kabezya & aussi <strong>mes proches </stron>pour leurs affections profondes. <br>
+        Je remercie enfin <strong>moi-même</strong> pour la persévérance et le courage d’avancer.<br>
+        Chaque étape de ma vie est un témoignage de gratitude et de bénédictions.
+    </p>
+</section>
+
+
+
+<!-- ================= Galerie photos ================= -->
+<section id="photos" style="display:none;">
+    <h2 class="section-title">📸 Galerie photos</h2>
+    <div class="gallery">
+        <figure class="photo-card">
+            <img src="images/photo1.jpg" alt="Photo 1" onclick="openLightbox(this)">
+            <figcaption>🌱 Ici commence mon histoire, là où tout a pris racine. Photo souvenir de 0 à 3 ans...</figcaption>
+        </figure>
+        <figure class="photo-card">
+            <img src="images/photo2.jpg" alt="Photo 2" onclick="openLightbox(this)">
+            <figcaption>🌱 Chaque jour m’apprenait silencieusement à devenir plus fort. Photo souvenir de 5 à 10 ans...</figcaption>
+        </figure>
+        <figure class="photo-card">
+            <img src="images/photo3.jpg" alt="Photo 3" onclick="openLightbox(this)">
+            <figcaption>🌱 Petit à petit, je découvrais la force qui grandissait en moi. Photo souvenir de 11 à 14 ans...</figcaption>
+        </figure>
+        <figure class="photo-card">
+            <img src="images/photo4.jpg" alt="Photo 4" onclick="openLightbox(this)">
+            <figcaption>🌱 À chaque étape, je me rapprochais un peu plus de la personne que je devais devenir. Photo souvenir de 14 à 16 ans...</figcaption>
+        </figure>
+        <figure class="photo-card">
+            <img src="images/photo5.jpg" alt="Photo actuelle" onclick="openLightbox(this)">
+            <figcaption>✨ Aujourd’hui, je suis le résultat de chaque étape traversée. Photo actuelle...</figcaption>
+        </figure>
+    </div>
+</section>
+
+<!-- ================= Tableau personnel ================= -->
+<section id="tableau" style="display:none;">
+    <h2 class="section-title">📊 Tableau Personnel</h2>
+    <div class="table-container">
+        <table>
+            <thead>
+                <tr>
+                    <th>Numéro</th>
+                    <th>Nom complet</th>
+                    <th>Nom du père</th>
+                    <th>Nom de la mère</th>
+                    <th>Adresse</th>
+                    <th>Téléphone</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Exemple de lignes, à compléter jusqu'à 16 -->
+                <tr>
+                    <td>1</td>
+                    <td>Tshingombe Bakajika Anaclet</td>
+                    <td>Karungu</td>
+                    <td>Kapinga</td>
+                    <td>Lubumbashi</td>
+                    <td>+243990029236</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Mbuyi Mwakana Premisse</td>
+                    <td>Karungu</td>
+                    <td>Kapinga</td>
+                    <td>Lubumbashi</td>
+                    <td>+243977080201</td>
+                </tr>
+                <tr><td>3</td><td>Ntumba Munyoka Plamedie</td><td>Karungu</td><td>Kapinga</td><td>Lubumbashi</td><td>+243987987082</td></tr>
+<tr><td>4</td><td>Ngala Mwepu Charline</td><td>Karungu</td><td>Kapinga</td><td>Lubumbashi</td><td>+243988299533</td></tr>
+<tr><td>5</td><td>Ntumba Kabaso Simeon </td><td>Karungu</td><td>Kapinga</td><td>Lubumbashi</td><td>+243982367801</td></tr>
+<tr><td>6</td><td>Mbaya Kantu Mardochet</td><td>Karungu</td><td>Kapinga</td><td>Lubumbashi</td><td>+243970259418</td></tr>
+<tr><td>7</td><td>Karungu Mbuyi Placide</td><td>Karungu</td><td>Kapinga</td><td>Lubumbashi</td><td>_</td></tr>
+<tr><td>8</td><td>Bukumbambo Kitenge Alegrasse</td><td>Karungu</td><td>Kapinga</td><td>Lubumbashi</td><td>_</td></tr>
+<tr><td>9</td><td>Mwape Musesa Naomie</td><td>Karungu</td><td>Kapinga</td><td>Lubumbashi</td><td>_</td></tr>
+<tr><td>10</td><td>Kazadi Kitenge Ruth</td><td>Karungu</td><td>Kapinga</td><td>Lubumbashi</td><td>_</td></tr>
+<tr><td>11</td><td>Kamwanya Mutamba Habigaëlla</td><td>Karungu</td><td>Kapinga</td><td>Lubumbashi</td><td>_</td></tr>
+<tr><td>12</td><td>Kalubi Mbuyi Cephas</td><td>Karungu</td><td>Kapinga</td><td>Lubumbashi</td><td>_</td></tr>
+<tr><td>13</td><td>Mukonkole Kabemba D'julia</td><td>Kabemba</td><td>Mujinga</td><td>Lubumbashi</td><td>+243976602529</td></tr>
+<tr><td>14</td><td>Mbaka Bushebu Harmonie</td><td>Bushebu
+</td><td>Kapinga</td><td>Lubumbashi</td><td>+243842238820</td></tr>
+<tr><td>15</td><td>Kapinga Katondesha Demaman</td></td><td>Mbaya</td><td>Bukumbambo</td><td>Lubumbashi</td><td>+243890890235</td></tr>
+<tr><td>16</td><td>Karungu Mbuyi Placide</td><td>Mbuyi</td><td>Ntumba</td><td>Lubumbashi</td><td>0975140080</td></tr><!-- répéter jusqu'à 16 lignes -->
+            </tbody>
+        </table>
+    </div>
+</section>
+
+<!-- ================= Lightbox ================= -->
+<div id="lightbox" onclick="closeLightbox()">
+    <span class="close-btn">✕</span>
+    <img id="lightbox-img">
+    <p id="lightbox-caption"></p>
+</div>
+
+<!-- ================= JavaScript ================= -->
+<script>
+/* ===== Splash logo ===== */
+window.addEventListener("load", () => {
+    const splash = document.getElementById("splash");
+    const welcome = document.getElementById("welcome");
+
+    // Afficher splash 2 secondes
+    setTimeout(() => {
+        splash.style.opacity = 0;
+        setTimeout(() => {
+            splash.style.display = "none";
+            welcome.style.display = "block"; // Afficher le message de bienvenue
+        }, 500);
+    }, 2000);
+});
+
+/* ===== Bouton démarrer ===== */
+const startBtn = document.getElementById("startBtn");
+startBtn.addEventListener("click", () => {
+    document.getElementById("welcome").style.display = "none";
+    document.getElementById("biographie").style.display = "block";
+    document.getElementById("photos").style.display = "block";
+    document.getElementById("tableau").style.display = "block";
+});
+
+/* ===== Lightbox ===== */
+function openLightbox(img) {
+    document.getElementById("lightbox").style.display = "flex";
+    document.getElementById("lightbox-img").src = img.src;
+    document.getElementById("lightbox-caption").innerText = img.nextElementSibling.innerText;
+}
+function closeLightbox() {
+    document.getElementById("lightbox").style.display = "none";
+}
+</script>
+
+</body>
+</html>

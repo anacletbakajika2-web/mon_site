@@ -1,0 +1,327 @@
+/* ===== Style global ===== */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #0f172a;
+    color: #e0f2fe;
+    margin: 0;
+    padding: 0;
+}
+
+/* ===== Titres ===== */
+.section-title {
+    font-size: 2rem;
+    text-align: center;
+    margin: 30px 0;
+    border-bottom: 3px solid #0ea5e9;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+/* ===== Galerie photos ===== */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 30px;
+    padding: 20px;
+}
+.photo-card {
+    background: rgba(255, 255, 255, 0.06);
+    border-radius: 22px;
+    overflow: hidden;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.45);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+.photo-card img {
+    width: 100%;
+    display: block;
+    cursor: pointer;
+}
+.photo-card figcaption {
+    padding: 14px;
+    text-align: center;
+    font-weight: 600;
+    font-size: 0.95rem;
+    color: #e0f2fe;
+    background: linear-gradient(135deg, #0284c7, #0ea5e9);
+    letter-spacing: 0.5px;
+    transition: background 0.3s, color 0.3s;
+}
+.photo-card:hover {
+    transform: scale(1.08);
+    box-shadow: 0 22px 45px rgba(0, 0, 0, 0.65);
+}
+.photo-card:hover figcaption {
+    background: linear-gradient(135deg, #0ea5e9, #38bdf8);
+    color: #ffffff;
+}
+
+/* ===== Lightbox ===== */
+#lightbox {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0,0,0,0.9);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    z-index: 9999;
+}
+#lightbox img {
+    max-width: 90%; max-height: 70%;
+    border-radius: 20px;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.8);
+}
+#lightbox-caption {
+    margin-top: 15px;
+    color: #e0f2fe;
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-align: center;
+}
+.close-btn {
+    position: absolute;
+    top: 20px; right: 25px;
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+}
+
+/* ===== Remerciements ===== */
+#remerciements {
+    background: linear-gradient(135deg, #38bdf8, #0ea5e9);
+    padding: 40px 20px;
+    border-radius: 25px;
+    margin: 40px auto;
+    max-width: 800px;
+    text-align: center;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.5);
+    color: #ffffff;
+}
+#remerciements .merci-text {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    letter-spacing: 0.5px;
+}
+
+/* ===== Biographie ===== */
+#openBioBtn {
+    background: linear-gradient(135deg, #0ea5e9, #38bdf8);
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+    margin-top: 20px;
+}
+#openBioBtn:hover {
+    transform: scale(1.08);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+}
+#bioContent {
+    display: none;
+    margin-top: 20px;
+    background: rgba(255,255,255,0.05);
+    padding: 20px;
+    border-radius: 20px;
+    color: #e0f2fe;
+    line-height: 1.6;
+}
+/* Splash screen */
+#splash {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: #0ea5e9; /* couleur de fond */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    opacity: 1;
+    transition: opacity 1s ease;
+}
+
+/* Logo animation */
+#logo {
+    width: 150px; /* adapte la taille */
+    height: auto;
+    animation: zoomFadeIn 2s ease-in-out;
+}
+
+@keyframes zoomFadeIn {
+    0% { transform: scale(0.5); opacity: 0; }
+    50% { transform: scale(1.2); opacity: 1; }
+    100% { transform: scale(1); opacity: 1; }
+}
+/* ===== Style global ===== */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #0f172a;
+    color: #e0f2fe;
+    margin: 0;
+    padding: 0;
+}
+
+/* Splash logo */
+#splash {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: #0ea5e9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    opacity: 1;
+    transition: opacity 0.5s ease;
+}
+#logo {
+    width: 150px;
+    height: auto;
+    animation: zoomFadeIn 2s ease-in-out;
+}
+@keyframes zoomFadeIn {
+    0% { transform: scale(0.5); opacity: 0; }
+    50% { transform: scale(1.2); opacity: 1; }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+/* Message de bienvenue */
+#welcome {
+    text-align: center;
+    padding: 50px 20px;
+}
+#welcome h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+#welcome p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+#welcome button {
+    background: linear-gradient(135deg, #0ea5e9, #38bdf8);
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+#welcome button:hover {
+    transform: scale(1.08);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+}
+
+/* ===== Galerie photos ===== */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 30px;
+    padding: 20px;
+}
+.photo-card {
+    background: rgba(255, 255, 255, 0.06);
+    border-radius: 22px;
+    overflow: hidden;
+    box-shadow: 0 12px 30px rgba(0,0,0,0.45);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+.photo-card img {
+    width: 100%;
+    display: block;
+    cursor: pointer;
+}
+.photo-card figcaption {
+    padding: 14px;
+    text-align: center;
+    font-weight: 600;
+    font-size: 0.95rem;
+    color: #e0f2fe;
+    background: linear-gradient(135deg, #0284c7, #0ea5e9);
+    letter-spacing: 0.5px;
+    transition: background 0.3s, color 0.3s;
+}
+.photo-card:hover {
+    transform: scale(1.08);
+    box-shadow: 0 22px 45px rgba(0,0,0,0.65);
+}
+.photo-card:hover figcaption {
+    background: linear-gradient(135deg, #0ea5e9, #38bdf8);
+    color: #ffffff;
+}
+
+/* ===== Lightbox ===== */
+#lightbox {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0,0,0,0.9);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    z-index: 9999;
+}
+#lightbox img {
+    max-width: 90%; max-height: 70%;
+    border-radius: 20px;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.8);
+}
+#lightbox-caption {
+    margin-top: 15px;
+    color: #e0f2fe;
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-align: center;
+}
+.close-btn {
+    position: absolute;
+    top: 20px; right: 25px;
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+}
+
+/* ===== Tableau ===== */
+.table-container {
+    overflow-x: auto;
+    padding: 20px;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: rgba(255,255,255,0.05);
+    color: #e0f2fe;
+}
+th, td {
+    border: 1px solid #0ea5e9;
+    padding: 8px;
+    text-align: center;
+    font-size: 0.9rem;
+}
+th {
+    background: linear-gradient(135deg, #0ea5e9, #38bdf8);
+}
+tr:hover {
+    background: rgba(14,165,233,0.2);
+}
+#biographie {
+    padding: 30px 20px;
+    max-width: 800px;
+    margin: 20px auto;
+    background: rgba(255,255,255,0.05);
+    border-radius: 20px;
+    box-shadow: 0 12px 35px rgba(0,0,0,0.5);
+}
+
+#biographie .merci-text {
+    font-size: 1.05rem;
+    line-height: 1.7;
+    color: #e0f2fe;
+}
